@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ⏳ COUNTDOWN (For Coming Soon)
     initCountdown();
+
+    // ⬆️ BACK TO TOP
+    initBackToTop();
 });
 
 /**
@@ -208,3 +211,38 @@ function initCountdown() {
         `;
     }, 1000);
 }
+
+/**
+ * ⬆️ BACK TO TOP BUTTON
+ */
+function initBackToTop() {
+    let btn = document.getElementById('back-to-top');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.id = 'back-to-top';
+        btn.className = 'back-to-top';
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('aria-label', 'Back to top');
+        btn.innerHTML = '<i class="bi bi-chevron-up"></i>';
+        document.body.appendChild(btn);
+    }
+
+    const toggleBackToTop = () => {
+        if (window.scrollY > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    };
+
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
