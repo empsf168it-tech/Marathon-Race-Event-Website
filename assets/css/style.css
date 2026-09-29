@@ -1120,6 +1120,65 @@ body[data-theme='dark'] .btn-hover-highlight:hover {
     }
 }
 
+/* 🏷️ PRICING FEATURE LIST ALIGNMENT (Desktop, Tab & Mobile) */
+.pricing-features-wrapper {
+    display: inline-block;
+    text-align: start;
+    max-width: 100%;
+}
+
+.pricing-features-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-features-list li {
+    display: flex;
+    align-items: flex-start;
+    text-align: start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.pricing-features-list li i {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+}
+
+[dir="rtl"] .pricing-features-wrapper {
+    text-align: right;
+}
+
+[dir="rtl"] .pricing-features-list,
+[dir="rtl"] .pricing-features-list li {
+    text-align: right;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@media (max-width: 991.98px) {
+    .pricing-features-wrapper {
+        display: inline-flex;
+        margin-inline: auto;
+        text-align: start;
+    }
+
+    .pricing-features-list {
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .pricing-features-list li {
+        justify-content: flex-start;
+        text-align: start;
+    }
+}
+
 /* 🗺️ CONTACT PAGE */
 .map-frame {
     filter: grayscale(0.8) contrast(1.1) opacity(0.9);
