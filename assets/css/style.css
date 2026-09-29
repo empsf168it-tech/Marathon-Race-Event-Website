@@ -422,6 +422,13 @@ body[data-theme='light'] .nav-puppet .navbar-toggler-icon {
 .bg-curtain-texture {
     background: var(--puppet-curtain-dark);
     background-image: repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 40px);
+    color: #FFFFFF;
+}
+
+.bg-curtain-texture .glass-pill,
+.bg-curtain-texture .glass-pill span,
+.bg-curtain-texture .glass-pill .small {
+    color: #FFFFFF !important;
 }
 
 .bg-curtain-texture .bg-glass {
